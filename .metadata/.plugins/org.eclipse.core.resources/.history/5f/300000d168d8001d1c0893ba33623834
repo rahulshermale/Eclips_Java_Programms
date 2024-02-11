@@ -1,0 +1,7 @@
+
+public class MsCit extends Course {
+ public  double fees() {
+	 double fees;
+	 return fee;
+ }
+}

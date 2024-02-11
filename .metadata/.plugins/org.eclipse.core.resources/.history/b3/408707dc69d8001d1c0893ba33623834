@@ -1,0 +1,7 @@
+
+public class DacDbda extends Course {
+	public double fees() {
+		double fee = 4000;
+		return fee;
+	}
+}

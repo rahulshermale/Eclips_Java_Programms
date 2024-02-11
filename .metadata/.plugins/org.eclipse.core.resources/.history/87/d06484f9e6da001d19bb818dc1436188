@@ -1,0 +1,18 @@
+import java.util.ArrayList;
+public class Problem_06 {
+public static void main(String[] args) {
+	
+	ArrayList<Integer> name=new ArrayList<Integer>();
+	
+	name.add(10);
+	name.add(20);
+	name.add(30);
+	name.add(40);
+	name.add(50);
+	
+	System.out.println(name.size());
+	System.out.println(name.get(0));
+	System.out.println(name.clone());
+	System.out.println(name);
+}
+}

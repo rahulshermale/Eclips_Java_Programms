@@ -1,0 +1,10 @@
+import day3.Node;
+
+public class Circular_List {
+	Node root, last;
+
+	void creatList() {
+
+		root = last = null;
+	}
+}

@@ -1,0 +1,237 @@
+
+import java.util.Scanner;
+
+/*
+ * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+ * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
+ */
+
+
+class Node
+{
+     int data;
+     Node next;
+    Node(int data)
+    {
+        this.data=data;
+        next=null;
+    }
+}
+public class LinearLinkedList 
+{
+ private Node root;
+ 
+ void createList()
+ {
+     root=null;
+ }
+  void insertLeft(int e)
+  {
+   Node n=new Node(e);
+   if(root==null)
+       root=n;
+   else
+   {
+     n.next=root;//1 
+     root=n;//2
+   }
+  }
+  void deleteLeft()
+  {
+    if(root==null)
+       System.out.println("Empty List");
+   else
+   {
+     Node t=root;//1
+     root=root.next;//2
+     System.out.println("Deleted:"+t.data);
+   }
+  }
+ void insertRight(int e)
+  {
+   Node n=new Node(e);
+   if(root==null)
+       root=n;
+   else
+   {
+     Node t=root;//1
+     while(t.next!=null)//2
+         t=t.next;
+     t.next=n;//3
+   }
+  }
+ void deleteRight()
+  {
+    if(root==null)
+       System.out.println("Empty List");
+   else
+   {
+     Node t=root;//1
+     Node t2=t;//1
+     while(t.next!=null)//2
+     {
+         t2=t;
+         t=t.next;
+     }
+     if(t==root)//only 1 node
+         root=null;
+     else
+         t2.next=null;//3
+     System.out.println("Deleted:"+t.data);
+   }
+  }
+ void printList()
+ {
+     if(root==null)
+         System.out.println("Empty List");
+     else
+     {
+         Node t=root;
+         while(t!=null)
+         {
+            System.out.println(t.data+"->");
+            t=t.next;
+         }
+     }
+ }
+ void search(int key)
+ {
+     if(root==null)
+         System.out.println("Empty List");
+     else
+     {
+         Node t=root;
+         while(t!=null && t.data!=key)
+         {
+            t=t.next;
+         }
+         if(t==null)
+             System.out.println("Not found");
+         else
+             System.out.println("found in list");
+     }
+   }
+  void deleteElement(int key)
+ {
+     if(root==null)
+         System.out.println("Empty List");
+     else
+     {
+         Node t=root;
+         Node t2=t;
+         while(t!=null && t.data!=key)
+         {
+            t2=t;
+            t=t.next;
+         }
+         if(t==null)
+             System.out.println("Not found");
+         else//found
+         { 
+          if(t==root)//case 1
+              root=root.next;
+          else if(t.next==null)//case 2
+              t2.next=null;
+          else//case 3
+          {
+            t2.next=t.next;
+          }
+          System.out.println(t.data+"Deleted");
+         }
+     }   
+ }
+  void insertAt(int e,int i)
+  {
+   Node n=new Node(e);
+   if(root==null)
+       root=n;
+   else
+   {
+     Node t=root;//1
+     Node t2=t;
+     while(t!=null && i>0)//2
+     {   t2=t;
+         t=t.next;
+         i--;
+     }
+     if (t==null)
+         System.out.println("Index Out Of Bound");
+    else
+     {
+         if(t==root)//index 0
+         {
+             n.next=root;
+             root=n;
+         }
+         else
+         {
+             t2.next=n;
+             n.next=t;
+         }
+      }
+  }
+  } 
+ public static void main(String args[])
+  {
+      int ch,e;
+      LinearLinkedList  obj=new LinearLinkedList();
+      Scanner in=new Scanner(System.in);
+      obj.createList();
+      do
+      {
+          System.out.println("\nMenu for LL\n1.Insert Left\n2.Insert Right\n3.Delete Left\n4.Delete Right\n5.Print\n6.Search\n7.Delete element\n8.InsertAt\n0.Exit\n:");
+          ch=in.nextInt();
+          switch(ch)
+          {
+              case 1:
+                     System.out.println("Enter element:");
+                     e=in.nextInt(); 
+                     obj.insertLeft(e);
+                     break;
+              case 2:
+                     System.out.println("Enter element:");
+                     e=in.nextInt(); 
+                     obj.insertRight(e);
+                     break;
+              
+              case 3:
+                     obj.deleteLeft();
+                     break;
+                     
+              case 4:
+                     obj.deleteRight();
+                     break;
+              case 5:
+                     obj.printList();
+                     break;
+              case 6:
+                     System.out.println("Enter element:");
+                     e=in.nextInt(); 
+                     obj.search(e);
+                     break;
+              case 7:
+                     System.out.println("Enter element:");
+                     e=in.nextInt(); 
+                     obj.deleteElement(e);
+                     break;
+             case 8:
+                     System.out.println("Index:");
+                     int index=in.nextInt(); 
+                     System.out.println("Enter element:");
+                     e=in.nextInt(); 
+                     obj.insertAt(e,index);
+                     break;
+              case 0:
+                      System.out.println("Exiting code ");
+                      break;
+              
+              default://error trapping
+                      System.out.println("Wrong choice");
+                      break;
+          }
+      }while(ch!=0);   
+      
+       
+  }
+ 
+}

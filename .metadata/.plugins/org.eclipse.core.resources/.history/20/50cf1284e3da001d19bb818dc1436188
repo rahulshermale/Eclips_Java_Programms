@@ -1,0 +1,15 @@
+import java.util.ArrayList;
+public class Problem_05 {
+	public static void main(String[] args) {
+		
+	
+	ArrayList<String> bike=new ArrayList<String>();
+	bike.add("FZ");
+	bike.add("PUlsur");
+	bike.add("Spelnder");
+	bike.add("Shine");
+	bike.add("Discover");
+	System.out.println(bike);
+	System.out.println(bike.indexOf(0));
+}
+}

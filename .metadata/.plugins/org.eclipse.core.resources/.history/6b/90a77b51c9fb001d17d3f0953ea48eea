@@ -1,0 +1,11 @@
+
+import java.util.Scanner;
+public class Ab01
+{
+    public static void main(String[]args)
+    {
+    	int s=30%9;
+      System.out.println   (s
+    		  );    
+    }
+}

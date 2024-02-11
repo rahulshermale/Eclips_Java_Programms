@@ -1,0 +1,16 @@
+
+import java.util.Scanner;
+
+public class Ab01 {
+	public static void main(String[]args)
+    {System.out.println("entr");
+    	Scanner sc=new Scanner (System.in);  
+    	int ob=sc.nextInt();
+    	if((ob+1)=0) 
+    		System.out.println("even");
+    	else
+    	System.out.println("odd");
+    	
+    }
+    
+}

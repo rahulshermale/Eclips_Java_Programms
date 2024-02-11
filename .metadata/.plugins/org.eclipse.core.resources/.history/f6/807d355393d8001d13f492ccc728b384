@@ -1,0 +1,14 @@
+  class FileStorage implements Persistable{
+
+	@Override
+	public void save() {
+	System.out.println("Saving ");
+		
+	}
+
+	@Override
+	public void load() {
+		System.out.println("Hello");
+	}
+
+}

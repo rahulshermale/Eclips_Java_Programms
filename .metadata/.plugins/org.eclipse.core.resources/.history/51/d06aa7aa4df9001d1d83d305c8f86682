@@ -1,0 +1,56 @@
+package day3;
+class Node{
+	
+	int data;
+	Node left,right;
+	Node(int data){
+		this.data=data;
+		left=right=null;
+	}
+	
+}
+public class TreeExample{
+	
+	Node root;
+	void createTree() {
+		root=null;
+		
+	}
+	void insert(Node r,Node n) {
+		if(root==null)
+		{
+			if(r.left==null);
+			else insert(r.left,n);
+		}
+		else {
+			if(r.right==null)
+			
+				r.right=n;
+			
+			else
+				insert(r.right,n);
+		}
+	}
+	void inorder(Node r)
+	{
+		if(r!=null) {
+	   inorder(r.left);//l
+	   System.out.println(r.data+",");
+	   inorder(r.right);
+			
+			
+		}
+	}
+	
+public static void main (String[]args) 
+	{
+		TreeExample obj=new TreeExample();
+		obj.createTree();
+		Node n=new Node(50);
+		obj.insert(obj.root,n);
+		n=new Node(100);
+		obj.insert(obj.root,n);
+		n=new Node(10);
+		obj.insert(obj.root,n);
+	}
+}

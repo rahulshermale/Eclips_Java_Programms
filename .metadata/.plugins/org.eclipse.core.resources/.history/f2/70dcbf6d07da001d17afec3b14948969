@@ -1,0 +1,12 @@
+/**
+ * @author 91897
+ *
+ */
+class Problem {
+	public static void main(String[] args) {
+		int num = 0;
+		num = 20;
+		String name = "Rahul";
+		System.out.println(num + name);
+	}
+}

@@ -1,0 +1,8 @@
+import java.util.Scanner;
+
+public class pROBLEM_03 {
+public static void main(String[] args) {
+	Scanner ra=new Scanner(System.in);
+	
+}
+}

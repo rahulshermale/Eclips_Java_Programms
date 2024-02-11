@@ -1,0 +1,14 @@
+/**
+ * @author 91897
+ *
+ */
+class Problem {
+	public static void main(String[] args) {
+		int num, num1, num2;
+		num = 20;
+		num1 = 10;
+		num2 = 10;
+		String name = "Rahul";
+		System.out.println(num + num1 + num2 + name);
+	}
+}

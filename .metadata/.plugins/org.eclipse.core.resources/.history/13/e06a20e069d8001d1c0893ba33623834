@@ -1,0 +1,7 @@
+
+public class Basic extends Course {
+	public double fees() {
+		double fee = 5000;
+		return fee;
+	}
+}

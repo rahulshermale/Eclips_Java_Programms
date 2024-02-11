@@ -1,0 +1,45 @@
+import java.util.Scanner;
+
+public class DynamicStack {
+
+	private int tos, Maxsize, stack[];
+
+	void createStack(int size) {
+		Maxsize = size;
+		tos = -1;
+		stack = new int[size];
+	}
+
+	void push(int e) {
+		tos++;
+		stack[tos] = e;
+	}
+
+	int pop() {
+
+		int temp = stack[tos];
+		tos--;
+		return temp;
+
+	}
+
+	void printStack() {
+		for (int i = tos; i >= 0; i--)
+			System.out.println(stack[i]);
+	}
+
+	int peek() {
+		return (stack[tos]);
+	}
+
+	public static void main(String[] args) {
+		StackExample1 obj = new StackExample1();
+		Scanner in = new Scanner(System.in);
+		System.out.println("Enter string to check:");
+
+		String s = in.next();
+		obj.createStack(s.length());
+
+	}
+
+}

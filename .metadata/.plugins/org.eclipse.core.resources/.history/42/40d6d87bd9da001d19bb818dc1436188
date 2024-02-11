@@ -1,0 +1,31 @@
+
+public class Problem_01 {
+	enum month
+	JAN,
+	FEB,
+	MARCH,
+	APRIL,
+	MAY
+	}
+
+
+public static void main(String[]args) {
+month MyVar=month.APRIL;
+
+switch(MyVar) {
+case APRIL:
+	break;
+case FEB:
+	break;
+case JAN:
+	break;
+case MARCH:
+	break;
+case MAY:
+	break;
+default:
+	break;
+
+}
+}
+}

@@ -1,0 +1,22 @@
+class base{
+	base(){
+		System.out.println("no arg const");
+	}
+	
+}
+class sub extends base{
+	sub(){
+		System.out.println("No arg constructor");
+	}
+}
+
+public class Extended_Programm{
+	public static void main(String[] args) {
+		
+	
+	sub s1=new sub();
+	
+	
+}
+}
+		

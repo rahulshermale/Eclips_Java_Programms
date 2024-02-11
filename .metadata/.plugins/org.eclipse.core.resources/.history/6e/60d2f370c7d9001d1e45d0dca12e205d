@@ -1,0 +1,72 @@
+package test.MultiThreading;
+
+abstract class coldBeavrage {
+
+	abstract void packing();
+
+	abstract void preparingProcess();
+}
+
+class Lassi extends coldBeavrage {
+
+	String Curd;
+	int suger;
+	int flavour;
+
+	@Override
+	public void packing() {
+		// TODO Auto-generated method stub
+
+	}
+
+	public void preparingProcess() {
+
+		System.out.println("preapring process");
+	}
+}
+
+class FruitJuice extends coldBeavrage {
+
+	@Override
+	public void packing() {
+		// TODO Auto-generated method stub
+
+	}
+
+	@Override
+	void preparingProcess() {
+		// TODO Auto-generated method stub
+
+	}
+
+	void preparingProcess(int Suger) {
+		System.out.println("for more Sweeter ");
+	}
+
+	void AddFruitCrush() {
+		System.out.println("Adding extra frut crush at time of serving as per user reqiremengt");
+	}
+
+}
+
+class coldDrink extends coldBeavrage {
+
+	@Override
+	public void packing() {
+		// TODO Auto-generated method stub
+
+	}
+
+	@Override
+	void preparingProcess() {
+		// TODO Auto-generated method stub
+
+	}
+
+}
+
+
+
+public class Fridge {
+	
+}

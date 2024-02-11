@@ -1,0 +1,23 @@
+
+import java.util.Scanner;
+public class Ab01
+{
+    public static void main(String[]args)
+    {
+        System.out.println("Enter Number");
+        Scanner sc= new Scanner(System.in);
+        int n=sc.nextInt();
+        double sqrt=Math.sqrt(n);
+       // System.out.println(sqrt+ " ....");
+    double ref=Math.sqrt(n);
+     System.out.println(sqrt);
+      System.out.println(ref);
+    if((sqrt-ref)!=0)
+    {
+    System.out.println("NOt Perfect sqrt");
+    }
+    else
+    System.out.println("Perfect sqrt");
+        
+    }
+}

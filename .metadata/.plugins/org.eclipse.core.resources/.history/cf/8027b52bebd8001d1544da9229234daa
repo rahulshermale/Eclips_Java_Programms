@@ -1,0 +1,2 @@
+package test.MultiThreading;
+public class Thread impelements Runnable

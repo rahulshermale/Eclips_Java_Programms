@@ -1,0 +1,4 @@
+interface Persistable{
+	void save();
+	void load();
+}

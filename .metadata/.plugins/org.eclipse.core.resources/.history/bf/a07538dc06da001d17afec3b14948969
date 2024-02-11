@@ -1,0 +1,11 @@
+/**
+ * @author 91897
+ *
+ */
+class Problem{
+	public static void main(String[] args) {
+		final int num=0;
+		num=20;
+		System.out.println(num);
+	}
+}

@@ -1,0 +1,22 @@
+class Demo{
+	int leng,width,height;
+	
+	 
+	void getName() {
+		System.out.println(leng*width*height);
+	}
+}
+
+
+
+
+public class Problem{
+	public static void main(String[] args) {
+		Demo d=new Demo();
+		d.height=10;
+		d.leng=20;
+		d.height=30;
+		
+		d.getName();
+	}
+}

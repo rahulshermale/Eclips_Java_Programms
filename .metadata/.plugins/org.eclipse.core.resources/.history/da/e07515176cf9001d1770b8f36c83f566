@@ -1,0 +1,32 @@
+public class StackExample01{
+	private int Maxsize,tos,s[];
+	
+	
+void createStack(int size) 
+{
+	Maxsize=size;
+	tos=-1;
+	s=new int[Maxsize];
+}
+	void push(int e) 
+	{
+		tos++;
+		s[tos]=e;
+	}
+	boolean isFull() 
+	{
+		if(tos==Maxsize-1) 
+			return true;
+		
+		else 
+		return false;
+	}
+	public int pop() 
+	{
+		int temp;
+		temp=s[tos];
+		tos--;
+		return temp;
+		
+	}
+}

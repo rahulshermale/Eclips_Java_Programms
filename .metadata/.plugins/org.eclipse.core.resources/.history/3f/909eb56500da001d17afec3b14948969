@@ -1,0 +1,16 @@
+class Demo{
+	int leng,width,height;
+	 
+	void getName(int len,width,height) {
+		
+	}
+}
+
+
+
+
+public class Problem{
+	public static void main(String[] args) {
+		
+	}
+}

@@ -1,0 +1,105 @@
+package day4;
+
+ class Node {
+	int data;
+	Node left, right;
+
+	public Node(int data) {
+		this.data = data;
+		left = right = null;
+	}
+}
+
+public class TreeOperations {
+	Node root;
+	static int count;
+
+	void createTree() {
+		root = null;
+	}
+
+	public void insert(Node r, Node n) {
+		if (root == null)
+			root = n;
+		else {
+			if (n.data < r.data) {
+				if (r.left == null)
+					r.left = n;
+				else
+					insert(r.left, n);
+
+			} else {
+				if (r.right == null)
+					r.right = n;
+				else
+					insert(r.right, n);
+			}
+		}
+
+	}
+
+	void inorder(Node r) {
+		if (r != null) {
+			inorder(r.left);// L
+			System.out.print(r.data + ",");// P
+			inorder(r.right);// R
+		}
+	}
+
+	void preorder(Node r) {
+		if (r != null) {
+			System.out.print(r.data + ",");// P
+			inorder(r.left);// L
+			inorder(r.right);// R
+		}
+	}
+	
+	void postorder(Node r) {
+		if (r != null) {
+			inorder(r.left);// L
+			inorder(r.right);// R
+			System.out.println(r.data + ",");// P
+		}
+		void countleafNodes(Node r)
+		{
+			if(r!=null)
+			{
+				countleafNodes(r.left);
+				if(r.left==null && r.right==null)
+					Treeexample.count++;
+				countleafNode(r.right);
+			}
+		}
+	}
+	
+	public static void main(String[] args) {
+		
+		TreeOperations obj = new TreeOperations();
+		obj.createTree();
+		
+		Node n = new Node(50);
+		obj.insert(obj.root, n);
+		
+		n = new Node(100);
+		obj.insert(obj.root, n);
+		
+		n = new Node(30);
+		obj.insert(obj.root, n);
+		
+		n = new Node(10);
+		obj.insert(obj.root, n);
+		
+		System.out.println("\nInOrder Data");
+		obj.inorder(obj.root);
+		
+		System.out.println("\nPreOrder Data");
+		obj.preorder(obj.root);
+		
+		System.out.println("\nPostOrder Data");
+		obj.postorder(obj.root);
+		
+		
+
+	}
+
+}

@@ -1,0 +1,11 @@
+/**
+ * @author 91897
+ *
+ */
+class Problem {
+	public static void main(String[] args) {
+		double r1=10000.005544555;
+		int r2=(int)r1;
+		System.out.println(r2);
+	}
+}

@@ -1,0 +1,17 @@
+
+public class Problem_01 {
+	enum Level{
+LOW,
+MEDIUM,
+HIGH
+}
+
+//	private static final Problem_01 MEDIUM = null;
+
+
+public static void main(String[]args) {
+Level myVar=Level.LOW;
+System.out.println(myVar);
+
+}
+}

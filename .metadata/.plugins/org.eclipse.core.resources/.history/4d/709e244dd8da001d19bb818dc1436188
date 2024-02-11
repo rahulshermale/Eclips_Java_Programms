@@ -1,0 +1,15 @@
+
+enum Problem_01 {
+LOW,
+MEDIUM,
+HIGH;
+	
+
+
+
+
+public static void main(String[]args) {
+Problem_01 myVar=Problem_01.MEDIUM;
+
+
+}}

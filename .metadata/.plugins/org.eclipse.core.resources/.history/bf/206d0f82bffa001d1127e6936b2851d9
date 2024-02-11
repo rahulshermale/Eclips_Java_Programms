@@ -1,0 +1,8 @@
+
+public class ReverseStream {
+public static void main(String[] args) {
+	String str="adam";
+	
+	System.out.println(str.length());
+}
+}

@@ -1,0 +1,7 @@
+class Problem{
+	public static void main(String[] args) {
+		System.out.print("Rahul ");
+		System.out.print("Sanjay ");
+		System.out.print("Shermale");
+	}
+}

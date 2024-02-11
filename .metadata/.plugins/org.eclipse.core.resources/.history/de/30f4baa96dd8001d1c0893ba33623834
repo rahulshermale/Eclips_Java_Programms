@@ -1,0 +1,25 @@
+class Student {
+
+	int rollno;
+	String name;
+	String Address;
+
+	Student(int rollno, String name, String Address) {
+		this.rollno = rollno;
+		this.name = name;
+		this.Address = Address;
+	}
+
+	void disp() {
+//		System.out.println("Roll No: "+this.rollno+"\nName: "+this.name+);
+		System.out.println("RollNo: " + this.rollno + "\nName: " + this.name);
+	}
+
+}
+
+public class Demo {
+	public static void main(String[] args) {
+		Student s1 = new Student(10, "RK", "Msouth");
+		s1.disp();
+	}
+}
